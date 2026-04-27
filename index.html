@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roblox-Style Terminal Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <h1>RBX TERMINAL // SIMULATION</h1>
+      <p class="disclaimer">SIMULATION MODE ONLY • VISUAL UI • NO REAL DATA OR NETWORK ACTIVITY</p>
+    </header>
+
+    <section class="status-grid" aria-label="Simulation Status">
+      <article class="status-card">
+        <span class="label">Timer</span>
+        <strong id="timeDisplay">01:00:00</strong>
+      </article>
+      <article class="status-card">
+        <span class="label">Progress</span>
+        <strong id="progressDisplay">0%</strong>
+      </article>
+      <article class="status-card">
+        <span class="label">State</span>
+        <strong id="stateDisplay">IDLE</strong>
+      </article>
+    </section>
+
+    <section class="progress-panel" aria-label="Simulation Progress">
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </section>
+
+    <section class="control-panel" aria-label="Simulation Controls">
+      <button id="startBtn" class="btn">Start</button>
+      <button id="pauseBtn" class="btn">Pause</button>
+      <button id="resetBtn" class="btn">Reset</button>
+      <button id="exportBtn" class="btn btn-accent">Export PNG</button>
+    </section>
+
+    <section class="terminal-frame" aria-label="Fake Terminal Output">
+      <div class="terminal-titlebar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="title">mock://rbx-sim/terminal</span>
+      </div>
+      <div id="logContainer" class="terminal-output" role="log" aria-live="polite"></div>
+    </section>
+
+    <footer class="app-footer">
+      <p>This interface is a fictional simulator inspired by a cyber terminal aesthetic. It does not perform real hacking or access real Roblox systems.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
