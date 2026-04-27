@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Roblox-style terminal simulator UI. Visual-only fake cyber terminal with countdown simulation."
+    />
+    <title>Roblox-Style Terminal Simulator (Visual Only)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="terminal-card" aria-label="Simulation terminal">
+        <header class="terminal-header">
+          <div class="window-controls" aria-hidden="true">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <h1>ROBLOX-STYLE TERMINAL SIMULATOR</h1>
+          <p class="safety-banner">SIMULATION MODE ONLY · NO REAL HACKING · NO NETWORK ACTIVITY</p>
+        </header>
+
+        <section class="stats-grid" aria-label="Simulation status">
+          <article class="stat-box">
+            <h2>Status</h2>
+            <p id="statusText">Idle</p>
+          </article>
+          <article class="stat-box">
+            <h2>Time Remaining</h2>
+            <p id="timeText">60:00</p>
+          </article>
+          <article class="stat-box">
+            <h2>Progress</h2>
+            <p id="percentText">0%</p>
+          </article>
+        </section>
+
+        <section class="progress-wrapper" aria-label="Simulation progress">
+          <div class="progress-track">
+            <div id="progressBar" class="progress-fill"></div>
+          </div>
+        </section>
+
+        <section class="controls" aria-label="Simulation controls">
+          <button id="startBtn" class="ui-btn">Start</button>
+          <button id="pauseBtn" class="ui-btn">Pause</button>
+          <button id="resetBtn" class="ui-btn">Reset</button>
+          <button id="exportBtn" class="ui-btn accent">Export PNG</button>
+        </section>
+
+        <section class="log-panel" aria-label="Animated simulation logs">
+          <div class="log-header">
+            <span>FAKE TERMINAL LOG</span>
+            <span class="log-tag">VISUAL DEMO</span>
+          </div>
+          <ul id="logList" class="log-list" aria-live="polite"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
